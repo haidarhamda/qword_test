@@ -16,8 +16,6 @@ export default function Login(){
       };
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(email);
-        // console.log(password);
         fetch('http://127.0.0.1:3001/users/login', {
             method: 'POST',
             headers: {
@@ -43,7 +41,6 @@ export default function Login(){
               cookies.set('email', data.user.email);
               cookies.set('name', data.user.name);
               router.push('/');
-              // console.log(cookies.get('email'));
             }
             console.log(data);
           })

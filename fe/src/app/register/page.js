@@ -32,12 +32,6 @@ export default function Register(){
             return res.json();
           }
           return res.json();
-
-            // else{
-            //   // alert('Email atau password salah');
-            //   console.log(res);
-            //   return res.json();
-            // }
         })
         .then((data) => {
           if (data.message === 'User created'){
@@ -47,9 +41,6 @@ export default function Register(){
           else if (data.message === 'User already exists'){
             alert('Email sudah digunakan');
           }
-            // cookies.set('email', data.user.email);
-            // cookies.set('name', data.user.name);
-            // console.log(cookies.get('email'));
           console.log(data);
         })
         .catch((error) => {

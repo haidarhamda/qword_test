@@ -13,8 +13,8 @@ export default function Order() {
 
     const options = [
         { label: '1 bulan', value: '1 bulan' },
-        { label: '6 bulan', value: '6 bulan' },
         { label: '3 bulan', value: '3 bulan' },
+        { label: '6 bulan', value: '6 bulan' },
         { label: '1 tahun', value: '1 tahun' },
       ];
     const [selectedOption, setSelectedOption] = useState({ label: '1 bulan', value: '1 bulan' });
@@ -67,25 +67,11 @@ export default function Order() {
             <label className='mr-4'>
                 Domain: {domain}
             </label>
-            {/* <select
-                //   options={options}
-                id='select'
-                value={selectedOption.value}
-                onChange={handleChange}
-                className="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                >
-                    {options.map((option) => (
-                        <option key={option.key} value={option.value}>
-                        {option.value}
-                        </option>
-                    ))}
-            </select> */}
             <Select
                 options={options}
                 value={selectedOption}
                 onChange={setSelectedOption}
                 />
-            {/* <p>{selectedOption.value}</p> */}
         </div>
         <div>
             <p
@@ -98,7 +84,7 @@ export default function Order() {
             onClick={handleSubmit}
             className="w-full py-2 px-4 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
-            Cari
+            Pesan
           </button>
         </form>
       </div>

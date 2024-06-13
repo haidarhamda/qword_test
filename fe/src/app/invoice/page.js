@@ -69,13 +69,11 @@ export default function Invoice() {
                 </tr>
             </thead>
             <tbody>
-                {/* {invoiceData.items.map((item) => ( */}
                 <tr key={1} className="border-b border-gray-200">
                     <td className="py-2 px-4 text-sm text-gray-700">1</td>
                     <td className="py-2 px-4 text-sm text-gray-700">Pembelian domain {domain}</td>
                     <td className="py-2 px-4 text-sm text-gray-700">Rp {price}</td>
                 </tr>
-                {/* // ))} */}
             </tbody>
             </table>
             <div className="mt-4 flex justify-end">
