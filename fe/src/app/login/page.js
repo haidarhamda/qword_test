@@ -1,11 +1,13 @@
 "use client"
 import { useState } from "react";
 import { useCookies } from "next-client-cookies";
+import { useRouter} from 'next/navigation';
 
 export default function Login(){
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const cookies = useCookies();
+    const router = useRouter();
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
       };
@@ -37,8 +39,10 @@ export default function Login(){
           })
           .then((data) => {
             if (data.message === 'Login success'){
+              alert('Login sukses, cari domain kembali');
               cookies.set('email', data.user.email);
               cookies.set('name', data.user.name);
+              router.push('/');
               // console.log(cookies.get('email'));
             }
             console.log(data);
